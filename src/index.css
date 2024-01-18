@@ -68,11 +68,14 @@ button.btn-full:focus-visible {
   min-height: 100vh;
 }
 
+body {
+  background-color: hsl(0, 0%, 98%);
+}
+
 header .container {
   display: flex;
   align-items: center;
   gap: 2rem;
-  background-color: hsl(0, 0%, 98%);
 }
 
 header h1 {
@@ -136,7 +139,7 @@ header .user-btns {
 /* END OF DROPDOWN STUFF */
 
 main {
-  margin-bottom: auto;
+  flex: 1;
 }
 
 footer {

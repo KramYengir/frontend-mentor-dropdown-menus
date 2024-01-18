@@ -4,6 +4,7 @@ import calendarIcon from "../assets/images/icon-calendar.svg";
 import todoIcon from "../assets/images/icon-todo.svg";
 import planningIcon from "../assets/images/icon-planning.svg";
 import remindersIcon from "../assets/images/icon-reminders.svg";
+import logoIMG from "../assets/images/logo.svg";
 
 const Header = () => {
   const [activeItem, setActiveItem] = useState("");
@@ -11,7 +12,7 @@ const Header = () => {
   return (
     <header>
       <div className="container">
-        <h1 className="logo">snap</h1>
+        <img src={logoIMG} alt="" />
         <nav>
           <ul>
             <li className="dropdown">
