@@ -1,4 +1,9 @@
+import DropdownButton from "./DropdownButton";
+import { useState } from "react";
+
 const Header = () => {
+  const [activeItem, setActiveItem] = useState("");
+
   return (
     <header>
       <div className="container">
@@ -6,13 +11,29 @@ const Header = () => {
         <nav>
           <ul>
             <li>
-              <div className="dropdown-btn">
-                <button>Features</button>
+              <div className="dropdown">
+                <DropdownButton
+                  activeItem={activeItem}
+                  setActiveItem={setActiveItem}
+                >
+                  Features
+                </DropdownButton>
+                {activeItem == "features" && (
+                  <div className="dropdown-menu">Hello {activeItem}</div>
+                )}
               </div>
             </li>
             <li>
-              <div className="dropdown-btn">
-                <button>Company</button>
+              <div className="dropdown">
+                <DropdownButton
+                  activeItem={activeItem}
+                  setActiveItem={setActiveItem}
+                >
+                  Company
+                </DropdownButton>
+                {activeItem == "company" && (
+                  <div className="dropdown-menu">Hello {activeItem}</div>
+                )}
               </div>
             </li>
             <li>Careers</li>
