@@ -4,6 +4,9 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+
+  text-decoration: none;
+  list-style: none;
 }
 
 .container {
@@ -16,8 +19,27 @@
   min-height: 100vh;
 }
 
-header {
+header .container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
   background-color: lime;
+}
+
+header nav {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+
+header ul {
+  display: flex;
+  gap: 1rem;
+}
+
+header .user-btns {
+  display: flex;
+  gap: 1rem;
 }
 
 main {
