@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@200;400;600;700&display=swap");
+/* GLOBAL STUFF */
 *,
 *::before,
 *::after {
@@ -7,11 +9,58 @@
 
   text-decoration: none;
   list-style: none;
+
+  font-family: "Epilogue", sans-serif;
+  font-size: 18px;
 }
 
 .container {
   padding: 25px 5vw;
 }
+
+li:not(.dropdown) {
+  padding: 10px 20px;
+}
+
+button,
+a {
+  color: hsl(0, 0%, 41%);
+  cursor: pointer;
+}
+
+button {
+  padding: 10px 20px;
+  background: transparent;
+
+  border-radius: 10px;
+  border: none;
+  outline: 1px solid transparent;
+}
+button:hover,
+button:focus-visible,
+a:hover,
+a:focus-visible {
+  color: black;
+}
+
+button.btn-border {
+  outline-color: rgba(0, 0, 0, 0.286);
+}
+button.btn-border:hover,
+button.btn-border:focus-visible {
+  outline-color: black;
+}
+
+button.btn-full {
+  background: black;
+}
+button.btn-full:hover,
+button.btn-full:focus-visible {
+  background: transparent;
+  outline-color: black;
+}
+
+/* END OF GLOBAL STUFF */
 
 #root {
   display: flex;
@@ -23,7 +72,13 @@ header .container {
   display: flex;
   align-items: center;
   gap: 2rem;
-  background-color: lime;
+  background-color: hsl(0, 0%, 98%);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-right: 2rem;
 }
 
 header nav {
@@ -34,7 +89,11 @@ header nav {
 
 header ul {
   display: flex;
-  gap: 1rem;
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
 }
 
 header .user-btns {
@@ -49,16 +108,30 @@ header .user-btns {
 
 .dropdown-menu {
   position: absolute;
-  left: 0;
   top: calc(100% + 0.5rem);
 
-  padding: 0.5rem;
+  padding: 1rem 0.5rem;
 
-  background-color: aqua;
+  background-color: rgb(255, 255, 255);
 
   border-radius: 10px;
 
   box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.137);
+}
+
+.dropdown-menu.right-aligned {
+  right: 0;
+}
+
+.dropdown-menu ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-menu ul li {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
 }
 /* END OF DROPDOWN STUFF */
 
