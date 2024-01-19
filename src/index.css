@@ -5,7 +5,7 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 
   text-decoration: none;
   list-style: none;
@@ -76,12 +76,12 @@ header .container {
   display: flex;
   align-items: center;
   gap: 2rem;
+
+  min-height: 100px;
 }
 
-header h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-right: 2rem;
+header .nav-container {
+  width: 100%;
 }
 
 header nav {
@@ -138,6 +138,10 @@ header .user-btns {
 }
 /* END OF DROPDOWN STUFF */
 
+header .responsive-menu {
+  display: none;
+}
+
 main {
   flex: 1;
 }
@@ -146,4 +150,61 @@ footer {
   display: flex;
   justify-content: center;
   margin-top: auto;
+}
+
+@media screen and (max-width: 950px) {
+  header .container {
+    justify-content: space-between;
+  }
+
+  header nav ul,
+  header nav .user-btns {
+    display: none;
+  }
+
+  nav {
+    margin-left: auto;
+  }
+
+  .responsive-menu {
+    position: absolute;
+    top: 1.5rem;
+    right: 2.5rem;
+  }
+
+  .nav-container.open ul,
+  .nav-container.open .user-btns {
+    display: block;
+  }
+
+  .nav-container.open {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    background: rgba(16, 27, 24, 0.552);
+    backdrop-filter: blur(1px);
+    height: 100vh;
+    width: 100vw;
+
+    display: grid;
+    justify-content: end;
+  }
+
+  .nav-container.open nav {
+    display: grid;
+    align-content: start;
+    gap: 2rem;
+    padding-top: 140px;
+    background: white;
+  }
+
+  .nav-container.open nav ul {
+    flex-direction: column;
+  }
+
+  nav .responsive-menu {
+    display: block;
+    z-index: 10;
+  }
 }
