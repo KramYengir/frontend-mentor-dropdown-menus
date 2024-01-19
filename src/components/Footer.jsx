@@ -2,11 +2,17 @@ const Footer = () => {
   return (
     <footer>
       <div className="attribution container">
-        Challenge by
+        Challenge by{" "}
         <a href="https://www.frontendmentor.io?ref=challenge" target="blank">
           Frontend Mentor
         </a>
-        . Coded by <a href="#">Your Name Here</a>.
+        . <br />
+        <br />
+        Coded by{" "}
+        <a href="https://www.rigneymade.com" target="blank">
+          Rigneymade
+        </a>
+        .
       </div>
     </footer>
   );
