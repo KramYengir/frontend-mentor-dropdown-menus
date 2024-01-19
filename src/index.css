@@ -172,8 +172,7 @@ footer {
     right: 2.5rem;
   }
 
-  .nav-container.open ul,
-  .nav-container.open .user-btns {
+  .nav-container.open ul {
     display: block;
   }
 
@@ -192,10 +191,15 @@ footer {
   }
 
   .nav-container.open nav {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     align-content: start;
+    justify-content: start;
     gap: 2rem;
+    width: 100%;
     padding-top: 140px;
+    padding-left: 10px;
+    width: 250px;
     background: white;
   }
 
@@ -206,5 +210,33 @@ footer {
   nav .responsive-menu {
     display: block;
     z-index: 10;
+  }
+
+  .nav-container.open .user-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-container.open .user-btns button {
+    flex: 1;
+    /* width: 100%; */
+  }
+
+  /* DROPDOWN MENU */
+
+  .dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .dropdown-menu {
+    position: relative;
+
+    padding: 1rem 0.5rem;
+
+    background-color: inherit;
+
+    box-shadow: NONE;
   }
 }
